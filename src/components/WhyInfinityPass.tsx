@@ -16,7 +16,7 @@ export const WhyInfinityPass = () => {
   };
 
   return (
-    <section id="why" className="py-20 bg-background">
+    <section id="why" className="py-5 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in">
           <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full mb-6">
@@ -36,7 +36,7 @@ export const WhyInfinityPass = () => {
 
         <div className="max-w-3xl mx-auto">
           <div className="bg-card rounded-2xl shadow-card p-8 sm:p-12 border border-border animate-slide-up">
-            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+            <div className="grid sm:grid-cols-2 gap-3 mb-8">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
@@ -56,9 +56,9 @@ export const WhyInfinityPass = () => {
                 size="lg"
                 variant="cta"
                 onClick={() => (window.location.href = "https://pages.razorpay.com/infinitypass")}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto px-6 py-3 whitespace-nowrap"
               >
-                🔥 Claim Your InfinityPass Now — ₹499 Only
+                🔥  InfinityPass Now — ₹499 Only
               </Button>
             </div>
           </div>

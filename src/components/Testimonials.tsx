@@ -9,67 +9,84 @@ import img7 from "@/assets/img7.jpg";
 
 export const Testimonials = () => {
   const [centerIndex, setCenterIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const images = [img1, img2, img3, img4, img5, img6, img7];
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setIsTransitioning(true);
       setCenterIndex((prev) => (prev + 1) % images.length);
-    }, 2500);
+      setTimeout(() => setIsTransitioning(false), 2500);
+    }, 5000);
+
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const getVisibleIndexes = () => {
-    const prev = (centerIndex - 1 + images.length) % images.length;
-    const next = (centerIndex + 1) % images.length;
-    return [prev, centerIndex, next];
+  const getTranslateX = (index: number) => {
+    const diff = (index - centerIndex + images.length) % images.length;
+    if (diff === 0) return "translate-x-0 scale-100 z-20 opacity-100";
+    if (diff === 1 || diff === -(images.length - 1))
+      return "translate-x-[280px] scale-90 opacity-70 z-10";
+    if (diff === images.length - 1 || diff === -1)
+      return "-translate-x-[280px] scale-90 opacity-70 z-10";
+    return "opacity-0 scale-75";
   };
 
-  const visibleIndexes = getVisibleIndexes();
-
   return (
-    <section className="py-16 sm:py-20 bg-secondary/30 overflow-hidden">
+    <section className="py-8 sm:py-20 bg-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4 text-center">
+        {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-6">
           Our Happy Learners
         </h2>
-        <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-12">
-          Meet some of our students from across the country
-        </p>
 
-        {/* Carousel */}
-        <div className="relative flex items-center justify-center overflow-hidden">
-          <div className="flex items-center justify-center gap-6 sm:gap-10 transition-all duration-700 ease-in-out">
-            {images.map((src, i) => {
-              if (!visibleIndexes.includes(i)) return null;
-
-              const isCenter = i === centerIndex;
-              const sideClass =
-                "scale-75 sm:scale-90 opacity-40 sm:opacity-60 blur-[2px] sm:blur-[1px] brightness-75 z-10";
-              const centerClass =
-                "scale-95 sm:scale-110 opacity-100 blur-0 brightness-100 z-20 shadow-2xl";
-
-              return (
-                <div
-                  key={i}
-                  className={`transition-all duration-700 ease-in-out transform ${isCenter ? centerClass : sideClass}`}
-                >
-                  <img
-                    src={src}
-                    alt={`student-${i}`}
-                    className="w-36 h-36 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl object-cover border border-gray-200"
-                  />
-                </div>
-              );
-            })}
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-10">
+          <div className="flex flex-col items-center">
+            <p className="text-3xl sm:text-4xl font-bold text-primary">20,000+</p>
+            <p className="text-base sm:text-lg font-medium text-muted-foreground">
+              Students Trained
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-3xl sm:text-4xl font-bold text-primary">11+</p>
+            <p className="text-base sm:text-lg font-medium text-muted-foreground">
+              Centers
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-3xl sm:text-4xl font-bold text-primary">95%</p>
+            <p className="text-base sm:text-lg font-medium text-muted-foreground">
+              Success Rate
+            </p>
           </div>
         </div>
 
+        {/* Testimonial Carousel */}
+        <div className="relative flex justify-center items-center h-[280px] sm:h-[350px]">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`testimonial-${index}`}
+              className={`absolute transition-all duration-700 ease-in-out rounded-xl shadow-lg object-cover w-[250px] sm:w-[300px] h-[180px] sm:h-[220px] ${getTranslateX(index)} ${isTransitioning ? "duration-500" : ""
+                }`}
+            />
+          ))}
+        </div>
+
         {/* Dot Indicators */}
-        <div className="flex justify-center mt-6 sm:mt-8 space-x-2 sm:space-x-3">
-          {images.map((_, i) => (
+        <div className="flex justify-center mt-6 sm:mt-8 space-x-3">
+          {[
+            centerIndex === 0 ? images.length - 1 : centerIndex - 1,
+            centerIndex,
+            (centerIndex + 1) % images.length,
+          ].map((i) => (
             <div
               key={i}
-              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-500 ${i === centerIndex ? "bg-primary scale-125 shadow-md" : "bg-gray-400/40"
+              className={`w-3 h-3 rounded-full transition-all duration-500 ${i === centerIndex
+                ? "bg-primary scale-125 shadow-md"
+                : "bg-gray-400/40"
                 }`}
             ></div>
           ))}

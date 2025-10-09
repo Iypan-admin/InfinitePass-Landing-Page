@@ -22,7 +22,7 @@ export const PurchaseModal = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // In a real app, this would process the form and redirect
     toast.success("🎉 Welcome to ISML InfinityPass!", {
       description: `You've selected ${language.charAt(0).toUpperCase() + language.slice(1)} (${mode.charAt(0).toUpperCase() + mode.slice(1)} mode). Check your email for next steps!`,

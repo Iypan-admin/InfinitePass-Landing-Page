@@ -8,7 +8,7 @@ export const LimitedOffer = () => {
   };
 
   return (
-    <section id="purchase" className="py-20 gradient-hero relative overflow-hidden">
+    <section id="purchase" className="py-8 gradient-hero relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-3xl"></div>
@@ -20,11 +20,11 @@ export const LimitedOffer = () => {
           <div className="animate-fade-in space-y-6 mb-12">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20 animate-pulse-glow">
               <Zap className="w-5 h-5 text-yellow-300" />
-              <span className="font-bold text-lg">10th year Anniversary offer</span>
+              <span className="font-bold text-lg">10th yr Anniversary offer</span>
             </div>
 
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-              Special Price: <span className="text-yellow-300">₹499 Only!</span>
+              Membership Price: <span className="text-yellow-300">₹499 Only!</span>
             </h2>
 
             <div className="flex items-center justify-center gap-4">
@@ -32,7 +32,7 @@ export const LimitedOffer = () => {
               <div className="bg-yellow-300 text-primary px-6 py-2 rounded-full">
                 <span className="flex items-center gap-2 font-bold text-lg">
                   <Tag className="w-5 h-5" />
-                  60% OFF
+                  50% OFF
                 </span>
               </div>
             </div>
@@ -42,7 +42,7 @@ export const LimitedOffer = () => {
             <p className="text-xl font-medium mb-6">⏰ Hurry! Offer Expires In:</p>
             <CountdownTimer />
             <p className="text-white/80 mt-6 text-lg">
-              This exclusive festive pricing ends at midnight. Don't miss out!
+              This is exclusive anniversary pricing. Don't miss out!
             </p>
           </div>
 

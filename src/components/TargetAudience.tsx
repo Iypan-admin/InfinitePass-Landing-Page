@@ -4,7 +4,7 @@ import { GraduationCap, Users, Briefcase, Heart } from "lucide-react";
 const audiences = [
   {
     icon: GraduationCap,
-    title: "Students (9-25 years)",
+    title: "School Learners (Age 7+)",
     description: "Build your career foundation with multiple languages",
   },
   {
@@ -30,12 +30,12 @@ export const TargetAudience = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-5 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Who Is This For?
+              For Whom?
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8">
@@ -65,7 +65,7 @@ export const TargetAudience = () => {
           <div className="text-center">
             <div className="bg-card rounded-2xl shadow-card p-8 border border-border mb-8 animate-fade-in-slow">
               <p className="text-2xl font-bold mb-4">
-                Join <span className="text-primary">50,000+</span> students already learning with ISML 🚀
+                Join Now, <span className="text-primary">20,000+</span> students have already learning with ISML 🚀
               </p>
               <p className="text-muted-foreground mb-6">
                 Be part of India's fastest-growing language learning community
@@ -77,7 +77,7 @@ export const TargetAudience = () => {
                 onClick={() => (window.location.href = "https://pages.razorpay.com/infinitypass")}
                 className="w-full sm:w-auto"
               >
-                🎫 Get My InfinityPass
+                🎫 Get My Membership
               </Button>
             </div>
           </div>
