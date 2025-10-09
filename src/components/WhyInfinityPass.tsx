@@ -55,7 +55,7 @@ export const WhyInfinityPass = () => {
               <Button
                 size="lg"
                 variant="cta"
-                onClick={() => (window.location.href = "https://pages.razorpay.com/infinitypass")}
+                onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
                 className="animate-bounce-soft"
               >
                 🔥  Become a Member — ₹499

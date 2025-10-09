@@ -127,7 +127,7 @@ export const ValueProposition = () => {
           <Button
             size="xl"
             variant="cta"
-            onClick={() => (window.location.href = "https://pages.razorpay.com/infinitypass")}
+            onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
             className="animate-bounce-soft"
           >
             🎉 Get Membership for ₹499

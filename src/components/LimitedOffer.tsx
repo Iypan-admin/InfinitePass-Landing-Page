@@ -55,7 +55,7 @@ export const LimitedOffer = () => {
           <Button
             size="xl"
             variant="cta"
-            onClick={() => (window.location.href = "https://pages.razorpay.com/infinitypass")}
+            onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
             className="animate-bounce-soft"
           >
             🎟 Buy Now & Start Learning

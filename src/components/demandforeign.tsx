@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
-const demandImages = Array.from({ length: 13 }, (_, i) => `/assets/lang${i + 1}.jpg`);
+// ✅ Use images from public/assets folder
+const demandImages: string[] = Array.from({ length: 13 }, (_, i) => `/assets/lang${i + 1}.jpg`);
 
-export const DemandForeign = () => {
-  const [centerIndex, setCenterIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+export const DemandForeign: React.FC = () => {
+  const [centerIndex, setCenterIndex] = useState<number>(0);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,10 +14,11 @@ export const DemandForeign = () => {
       setCenterIndex((prev) => (prev + 1) % demandImages.length);
       setTimeout(() => setIsTransitioning(false), 2500);
     }, 5000);
+
     return () => clearInterval(interval);
   }, []);
 
-  const getTranslateX = (index) => {
+  const getTranslateX = (index: number): string => {
     const diff = (index - centerIndex + demandImages.length) % demandImages.length;
     if (diff === 0) return "translate-x-0 scale-105 opacity-100 z-20";
     if (diff === 1) return "translate-x-[220px] scale-90 opacity-70 z-10";
@@ -37,9 +39,8 @@ export const DemandForeign = () => {
             {demandImages.map((src, i) => (
               <div
                 key={i}
-                className={`absolute transform ${getTranslateX(i)} ${
-                  isTransitioning ? "transition-all duration-[2500ms] ease-in-out" : "transition-none"
-                }`}
+                className={`absolute transform ${getTranslateX(i)} ${isTransitioning ? "transition-all duration-[2500ms] ease-in-out" : "transition-none"
+                  }`}
               >
                 <img
                   src={src}
@@ -56,9 +57,8 @@ export const DemandForeign = () => {
           {demandImages.map((_, idx) => (
             <div
               key={idx}
-              className={`w-3 h-3 rounded-full transition-all duration-500 ${
-                idx === centerIndex ? "bg-primary scale-125 shadow-md" : "bg-gray-400/40"
-              }`}
+              className={`w-3 h-3 rounded-full transition-all duration-500 ${idx === centerIndex ? "bg-primary scale-125 shadow-md" : "bg-gray-400/40"
+                }`}
             ></div>
           ))}
         </div>
@@ -68,7 +68,7 @@ export const DemandForeign = () => {
           <Button
             size="xl"
             variant="cta"
-            onClick={() => (window.location.href = "https://pages.razorpay.com/infinitypass")}
+            onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
             className="animate-bounce-soft px-6 py-4 text-lg font-semibold shadow-lg"
           >
             🎉 Get Membership for ₹499

@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { WhyInfinityPass } from "@/components/WhyInfinityPass";
-import DemandForeign from "@/components/demandforeign";
+import { DemandForeign } from "@/components/demandforeign";
+
 import { ValueProposition } from "@/components/ValueProposition";
 import { TargetAudience } from "@/components/TargetAudience";
 import { LimitedOffer } from "@/components/LimitedOffer";
@@ -14,7 +15,7 @@ const Index = () => {
     <main className="min-h-screen relative">
       <HeroSection />
       <WhyInfinityPass />
-      <DemandForeign /> {/* ✅ Fixed component name */}
+      <DemandForeign />
       <ValueProposition />
       <TargetAudience />
       <LimitedOffer />
