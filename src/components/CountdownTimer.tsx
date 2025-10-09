@@ -7,29 +7,30 @@ interface TimeLeft {
 }
 
 export const CountdownTimer = () => {
-  const calculateTimeLeft = (): TimeLeft => {
-    const now = new Date();
-    const midnight = new Date();
-    midnight.setHours(24, 0, 0, 0);
-    
-    const difference = midnight.getTime() - now.getTime();
-    
+  // Countdown duration in milliseconds (4 hours)
+  const COUNTDOWN_DURATION = 4 * 60 * 60 * 1000;
+
+  const calculateTimeLeft = (endTime: number): TimeLeft => {
+    const now = new Date().getTime();
+    const difference = Math.max(endTime - now, 0); // prevent negative
+
     return {
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
+      minutes: Math.floor((difference / (1000 * 60)) % 60),
       seconds: Math.floor((difference / 1000) % 60),
     };
   };
 
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+  const [endTime] = useState(() => new Date().getTime() + COUNTDOWN_DURATION);
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft(endTime));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      setTimeLeft(calculateTimeLeft(endTime));
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [endTime]);
 
   return (
     <div className="flex items-center justify-center gap-2 sm:gap-4 animate-pulse-glow">

@@ -35,17 +35,17 @@ export const HeroSection = () => {
 
           {/* Social Icons */}
           <div className="flex items-center space-x-3">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/learnwithisml/" target="_blank" rel="noopener noreferrer">
               <div className="w-7 h-7 flex items-center justify-center rounded-full bg-pink-100 hover:bg-pink-200 transition">
                 <Instagram className="w-4 h-4 text-pink-500" />
               </div>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@learnwithisml" target="_blank" rel="noopener noreferrer">
               <div className="w-7 h-7 flex items-center justify-center rounded-full bg-red-100 hover:bg-red-200 transition">
                 <Youtube className="w-4 h-4 text-red-600" />
               </div>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/learnwithisml/" target="_blank" rel="noopener noreferrer">
               <div className="w-7 h-7 flex items-center justify-center rounded-full bg-blue-100 hover:bg-blue-200 transition">
                 <Linkedin className="w-4 h-4 text-blue-700" />
               </div>
@@ -68,7 +68,7 @@ export const HeroSection = () => {
       </div>
 
       {/* 🏆 Hero Content */}
-      <div className="container mx-auto px-4 py-24 sm:py-28 relative z-10">
+      <div className="container mx-auto px-4 py-12 sm:py-28 relative z-10">
         <div className="flex flex-col items-center text-center space-y-6">
           <div className="max-w-4xl space-y-5 animate-fade-in">
             {/* 🎉 Offer Tag */}
@@ -114,32 +114,32 @@ export const HeroSection = () => {
             <div className="space-y-3 pt-3">
               <div className="text-center">
                 <Button
-                  size="lg"
+                  size="xl"
                   variant="cta"
-                  onClick={() =>
-                    (window.location.href = "https://pages.razorpay.com/infinitypass")
-                  }
-                  className="px-6 py-3 text-base sm:text-lg font-semibold"
+                  onClick={() => (window.location.href = "https://pages.razorpay.com/infinitypass")}
+                  className="animate-bounce-soft"
                 >
                   🎉 Get Membership for ₹499
                 </Button>
               </div>
 
               {/* Countdown Box */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 max-w-sm mx-auto mt-2">
-                <p className="text-sm font-medium mb-2 flex items-center justify-center gap-2 text-white">
+              <div className="bg-white backdrop-blur-md rounded-2xl p-6 border border-gray-200 max-w-sm mx-auto mt-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <p className="text-sm font-semibold mb-4 flex items-center justify-center gap-2 text-gray-900">
                   ⏰ <span>Offer ends in:</span>
                 </p>
+
                 <CountdownTimer />
-                <p className="text-xs text-white/80 mt-3 text-center">
-                  Join before midnight to unlock bonuses worth ₹59,700+
+
+                <p className="text-xs text-gray-700 mt-4 text-center leading-snug">
+                  Join now to unlock bonuses worth <span className="font-bold text-gray-900">₹59,700+</span>
                 </p>
               </div>
             </div>
           </div>
 
           {/* 🖼️ Flippable Image */}
-          <div className="w-full max-w-[700px] mt-6 [perspective:1000px] mx-auto group">
+          <div className="w-full max-w-[700px] mt-2 [perspective:1000px] mx-auto group">
             <div className="relative w-full aspect-[3/2] transition-transform duration-[2000ms] ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               <div className="absolute inset-0 [backface-visibility:hidden]">
                 <img src={heroImage} alt="Front Side" className="w-full h-full rounded-2xl shadow-2xl object-cover" />

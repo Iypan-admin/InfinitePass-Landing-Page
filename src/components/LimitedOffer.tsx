@@ -38,11 +38,16 @@ export const LimitedOffer = () => {
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-white/20 mb-8 animate-slide-up">
-            <p className="text-xl font-medium mb-6">⏰ Hurry! Offer Expires In:</p>
+          {/* Countdown Box */}
+          <div className="bg-white backdrop-blur-md rounded-2xl p-6 border border-gray-200 max-w-sm mx-auto mt-6 shadow-lg hover:shadow-xl transition-all duration-300">
+            <p className="text-sm font-semibold mb-4 flex items-center justify-center gap-2 text-gray-900">
+              ⏰ <span>Offer ends in:</span>
+            </p>
+
             <CountdownTimer />
-            <p className="text-white/80 mt-6 text-lg">
-              This is exclusive anniversary pricing. Don't miss out!
+
+            <p className="text-xs text-gray-700 mt-4 text-center leading-snug">
+              Join now to unlock bonuses worth <span className="font-bold text-gray-900">₹59,700+</span>
             </p>
           </div>
 

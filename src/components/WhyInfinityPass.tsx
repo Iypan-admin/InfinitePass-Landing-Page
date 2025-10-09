@@ -19,10 +19,10 @@ export const WhyInfinityPass = () => {
     <section id="why" className="py-5 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in">
-          <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full mb-6">
+          {/* <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Why Choose Us</span>
-          </div>
+          </div> */}
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Why settle for one language when you can{" "}
@@ -56,10 +56,11 @@ export const WhyInfinityPass = () => {
                 size="lg"
                 variant="cta"
                 onClick={() => (window.location.href = "https://pages.razorpay.com/infinitypass")}
-                className="w-full sm:w-auto px-6 py-3 whitespace-nowrap"
+                className="animate-bounce-soft"
               >
-                🔥  InfinityPass Now — ₹499 Only
+                🔥  Become a Member — ₹499
               </Button>
+
             </div>
           </div>
         </div>

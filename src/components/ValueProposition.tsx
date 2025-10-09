@@ -6,7 +6,7 @@ export const ValueProposition = () => {
   const benefits = [
     { icon: Laptop, title: "Course Fee Discounts upto 15%", description: "Learning platform & rewards" },
     { icon: BookOpen, title: "3-Year Validity", description: "Extended access to all resources" },
-    { icon: Globe, title: "All Language Access", description: "French, German & Japanese" },
+    { icon: Globe, title: "All Language Access", description: "French, German & Japanese + Spanish, Korean, Russian, Italian" },
     { icon: Trophy, title: "Internship & Placement", description: "Career opportunities & guidance" },
     { icon: Sparkles, title: "Event & Workshop Discounts", description: "Exclusive member benefits" },
   ];
@@ -100,13 +100,22 @@ export const ValueProposition = () => {
               <div className="p-4 bg-white/20 rounded-lg backdrop-blur-sm">
                 <Gift className="w-8 h-8 text-white" />
               </div>
-              <div>
-                <h3 className="font-bold text-2xl text-white mb-1">Benefits Value</h3>
-                <p className="text-white/80">Everything included in your InfinityPass</p>
+              <div className="max-w-md mx-auto mb-6 text-left">
+                <h3 className="font-bold text-2xl sm:text-3xl text-white mb-2">
+                  Infinity Benefits
+                </h3>
+                <p className="text-white/80 text-base sm:text-lg">
+                  Membership worth
+                </p>
               </div>
+
+
             </div>
             <div className="text-center">
-              <p className="text-white/80 text-sm line-through mb-1">₹59,700+</p>
+              <p className="text-white/80 text-2xl sm mb-2 line-through decoration-yellow-400">
+                ₹59,700+
+              </p>
+
               <p className="text-4xl sm:text-5xl font-bold text-yellow-300">₹499</p>
               <p className="text-white/90 text-sm mt-1">Limited Time Only</p>
             </div>
