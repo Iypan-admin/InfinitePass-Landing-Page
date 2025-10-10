@@ -113,14 +113,14 @@ export const HeroSection = () => {
             {/* 🎯 CTA + Timer */}
             <div className="space-y-3 pt-3">
               <div className="text-center">
-                <Button
-                  size="xl"
-                  variant="cta"
-                  onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
-                  className="animate-bounce-soft"
-                >
-                  🎉 Get Membership for ₹499
-                </Button>
+               <Button
+  size="xl"
+  variant="yellow-cta"
+  onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
+  className="animate-bounce-soft"
+>
+  🎉 Get Membership for ₹ 499
+</Button>
               </div>
 
               {/* Countdown Box */}
