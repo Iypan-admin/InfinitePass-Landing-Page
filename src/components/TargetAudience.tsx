@@ -5,7 +5,7 @@ const audiences = [
   { icon: GraduationCap, title: "School Learners (Age 7+)", description: "Build your career foundation with multiple languages" },
   { icon: Users, title: "College Learners", description: "Stand out in placements and internships" },
   { icon: Briefcase, title: "Professionals", description: "Advance your career with international opportunities" },
-  { icon: Heart, title: "Language Enthusiasts", description: "Turn your passion into mastery" },
+  { icon: Heart, title: "Home Maker", description: "Turn your passion into mastery" },
 ];
 
 const discounts = [
