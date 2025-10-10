@@ -90,8 +90,7 @@ export const HeroSection = () => {
             </p>
 
             <p className="text-base text-white/80 max-w-2xl mx-auto">
-              Become multilingual — smarter, faster, and unstoppable with
-              French, German, Japanese, and more!
+              Get 3 years of multilingual learning benefits in courses, internships, study-abroad support. 
             </p>
 
             {/* 🌟 Bullet Points */}
