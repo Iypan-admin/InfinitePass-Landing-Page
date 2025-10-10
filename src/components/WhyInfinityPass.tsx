@@ -51,17 +51,16 @@ export const WhyInfinityPass = () => {
               ))}
             </div>
 
-            <div className="text-center pt-6 border-t border-border">
-              <Button
-                size="lg"
-                variant="cta"
-                onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
-                className="animate-bounce-soft"
-              >
-                🔥  Become a Member — ₹499
-              </Button>
-
-            </div>
+           <div className="flex justify-center pt-6 border-t border-border">
+  <Button
+    size="lg"
+    variant="cta" // use yellow variant for solid yellow
+    onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
+    className="animate-bounce-soft"
+  >
+    🔥 Become a Member — ₹499
+  </Button>
+</div>
           </div>
         </div>
       </div>
