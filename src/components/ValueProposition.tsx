@@ -123,16 +123,16 @@ export const ValueProposition = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-10 animate-slide-up">
-          <Button
-            size="xl"
-            variant="cta"
-            onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
-            className="animate-bounce-soft"
-          >
-            🎉 Get Membership for ₹499
-          </Button>
-        </div>
+        <div className="flex justify-center mt-10 animate-slide-up">
+  <Button
+    size="xl"
+    variant="cta" // use yellow variant for solid yellow
+    onClick={() => (window.location.href = "https://pages.razorpay.com/membershipinfinity")}
+    className="animate-bounce-soft"
+  >
+    🎉 Get Membership for ₹499
+  </Button>
+</div>
       </div>
     </section >
   );
