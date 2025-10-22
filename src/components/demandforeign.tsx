@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 // ✅ Use images from public/assets folder
+<<<<<<< HEAD
 const demandImages: string[] = Array.from({ length: 8 }, (_, i) => `/assets/lang${i + 1}.jpg`);
+=======
+const demandImages: string[] = Array.from({ length: 13 }, (_, i) => `/assets/lang${i + 1}.jpg`);
+>>>>>>> abbe3d6c38bdd729461530c0d3c9fe5dda1d458c
 
 export const DemandForeign: React.FC = () => {
   const [centerIndex, setCenterIndex] = useState<number>(0);

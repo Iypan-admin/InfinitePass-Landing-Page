@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button";
 import { CountdownTimer } from "./CountdownTimer";
 import heroImage from "@/assets/infinitefront.jpg";
 import heroImageBack from "@/assets/infiniteback.jpg";
+<<<<<<< HEAD
 import infinity from "@/assets/inifinity.jpg";
+=======
+>>>>>>> abbe3d6c38bdd729461530c0d3c9fe5dda1d458c
 import {
   Sparkles,
   Globe,
@@ -142,10 +145,17 @@ export const HeroSection = () => {
           <div className="w-full max-w-[700px] mt-2 [perspective:1000px] mx-auto group">
             <div className="relative w-full aspect-[3/2] transition-transform duration-[2000ms] ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               <div className="absolute inset-0 [backface-visibility:hidden]">
+<<<<<<< HEAD
                 <img src={infinity} alt="Front Side" className="w-full h-full rounded-2xl shadow-2xl object-cover" />
               </div>
               <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 <img src={infinity} alt="Back Side" className="w-full h-full rounded-2xl shadow-2xl object-cover" />
+=======
+                <img src={heroImage} alt="Front Side" className="w-full h-full rounded-2xl shadow-2xl object-cover" />
+              </div>
+              <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <img src={heroImageBack} alt="Back Side" className="w-full h-full rounded-2xl shadow-2xl object-cover" />
+>>>>>>> abbe3d6c38bdd729461530c0d3c9fe5dda1d458c
               </div>
             </div>
           </div>
